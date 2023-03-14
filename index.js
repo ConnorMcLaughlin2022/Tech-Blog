@@ -37,9 +37,9 @@ app.use(allRoutes);
 app.get("/sessions", (req, res) => {
   res.json(req.session);
 });
-app.get("/",(req,res)=>{
-  res.send("im  alive!")
-})
+// app.get("/",(req,res)=>{
+//   res.send("im  alive!")
+// })
 sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);

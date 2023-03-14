@@ -39,27 +39,27 @@ router.get("/:id", (req,res)=>{
 
 router.post("/login",(req,res)=>{
     User.findOne({
-        where:{
-            email:req.body.email
-        }
+    where:{
+     email:req.body.email
+    }
     }).then(userData=>{
-        if(!userData){
-            return res.status(401).json({msg:"incorrect email or password"})
-        }else{
-            if(bcrypt.compareSync(req.body.password,userData.password)){  
-                req.session.userId = userData.id;
-                req.session.userEmail = userData.email;
-                req.session.logged_in = true;
-                return res.json(userData)
-            }else{
-                return res.status(401).json({msg:"incorrect email or password"})
-            }
-        }
+     if(!userData){
+         return res.status(401).json({msg:"incorrect email or password"})
+     } else {
+         if(bcrypt.compareSync(req.body.password,userData.password)){
+             req.session.userId = userData.id;
+             req.session.userEmail = userData.email;
+             return res.json(userData)
+         } else {
+             return res.status(401).json({msg:"incorrect email or password"})
+         }
+     }
     }).catch(err=>{
-        console.log(err);
-        res.status(500).json({msg:"something went wrong.."})
+     console.log(err);
+     res.status(500).json({msg:"oh noes!",err})
     })
-});
+ })
+ 
 
 router.post("/signup", (req,res)=>{
     console.log(req.body);

@@ -1,8 +1,8 @@
 document.querySelector("#post-btn").addEventListener("click", (e) => {
     e.preventDefault();
     const postObj = {
-        title: document.querySelector("#postTitle").value,
-        content: document.querySelector("#addPost").value,
+        title: document.querySelector("#post-title").value,
+        content: document.querySelector("#add-post").value,
     }
     fetch('api/posts', {
         method: 'POST',
@@ -14,7 +14,7 @@ document.querySelector("#post-btn").addEventListener("click", (e) => {
         if (res.ok) {
             location.href = "/profile"
         } else {
-            alert("something went wrong")
+            alert("something wenttt wrong")
         }
     })
 })
@@ -88,9 +88,6 @@ document.querySelector(".submit-edit").addEventListener("click", (e) => {
     }).then((res) => {
         if (res.ok) {
             location.reload();
-
-            // }else{
-            //     alert('something went wrong')
         }
     })
         ;

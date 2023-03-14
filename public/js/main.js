@@ -1,4 +1,4 @@
-document.querySelector("#logout").addEventListener("click",e=>{
+document.querySelector("#logout").addEventListener("submit",e=>{
     e.preventDefault();
 
     fetch("/api/users/logout",{ 

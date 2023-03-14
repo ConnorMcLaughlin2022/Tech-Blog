@@ -15,7 +15,6 @@ router.get("/:id", (req, res) => {
         include: [User]
     }).then((postData) => {
         res.json(postData)
-        // console.log(postData)
     }).catch((err) => {
         console.log(err);
         res.status(500).json({ msg: "something went wrong", err })
@@ -32,7 +31,7 @@ router.post("/", (req, res) => {
         res.json(postData)
     }).catch(err => {
         console.log(err)
-        res.status(500).json({ msg: "something went wrong" })
+        res.status(500).json({ msg: "something wenttttt wrong" })
     })
 })
 

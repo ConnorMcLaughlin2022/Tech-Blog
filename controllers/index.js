@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-router.get("/sessionData",(req,res)=>res.json(req.session))
+
 
 
 const userRoutes = require('./userController'); 

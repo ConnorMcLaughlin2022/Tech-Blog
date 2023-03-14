@@ -1,9 +1,10 @@
+<div class="profile">   
 <h1>Profile</h1>
 <section class="box">
     <div id="post-form">
         <form>
-            <input type="text" id="postTitle" placeholder="Post Title">
-            <input type="text" id="addPost" placeholder="enter post here">
+            <input type="text" id="post-title" placeholder="Post Title">
+            <input type="text" id="add-post" placeholder="enter post here">
             <button class="button-form" id="post-btn">Post!</button>
         </form>
     </div>
@@ -18,7 +19,7 @@
 <button class="button-form edit-btn" id="{{id}}">Edit</button>
 <div class="hide edit-form" id="edit-form-{{id}}">
 
-    <form>
+    <form class="form">
         <input id="title-edit-{{id}}" type="text" value="{{title}}">
         <textarea id="content-edit-{{id}}">{{content}}</textarea>
         <button class="submit-edit" id='{{id}}'>Update Post</button>
@@ -30,3 +31,4 @@
 <button class="button-form del-btn" id='{{id}}'>Delete</button>
 {{/each}}
 <script src="/js/profile.js"></script>
+</div>
