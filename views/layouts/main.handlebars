@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<header>
+    <div class="nav-bar">
+        <a href="/">Home</a>
+        {{#if logged_in}}
+        <a href="/profile">Dashboard</a>
+        <a id="logout" href="/">Logout</a>
+        {{else}}
+        <a href="/login">Login</a>
+        <a href="/signup">Sign-up</a>
+        {{/if}}
+    </div>
+    <div id="title">The Tech Spot</div>
+
+</header>
+
 <body>
-    <header><h2>This is the header</h2></header>
     <main>
-    {{{body}}}
+        {{{body}}}
     </main>
-    <footer><h2>This is the footer</h2></footer>
+    <script src="/js/main.js"></script>
 </body>
+
 </html>

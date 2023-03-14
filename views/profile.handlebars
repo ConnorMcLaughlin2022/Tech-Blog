@@ -1,1 +1,32 @@
 <h1>Profile</h1>
+<section class="box">
+    <div id="post-form">
+        <form>
+            <input type="text" id="postTitle" placeholder="Post Title">
+            <input type="text" id="addPost" placeholder="enter post here">
+            <button class="button-form" id="post-btn">Post!</button>
+        </form>
+    </div>
+
+</section>
+{{#each User.Posts}}
+<div class="post-area">
+    <h3 class="title-area">{{title}}:</h3>
+    <h3>{{content}}</h3>
+</div>
+
+<button class="button-form edit-btn" id="{{id}}">Edit</button>
+<div class="hide edit-form" id="edit-form-{{id}}">
+
+    <form>
+        <input id="title-edit-{{id}}" type="text" value="{{title}}">
+        <textarea id="content-edit-{{id}}">{{content}}</textarea>
+        <button class="submit-edit" id='{{id}}'>Update Post</button>
+    </form>
+
+</div>
+
+<button class="hide cancel-edit" id="cancel-edit-{{id}}">Cancel</button>
+<button class="button-form del-btn" id='{{id}}'>Delete</button>
+{{/each}}
+<script src="/js/profile.js"></script>
