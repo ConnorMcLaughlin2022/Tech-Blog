@@ -2,18 +2,32 @@
     margin: 0px;
 }
 header {
-    height: 70px;
+    height: fit-content;
     background: aqua;
     padding: 10px;
     
 }
-nav{
-    float: right;
+.tech-spot {
+    padding: 10px;
+    background-color: black;
+    color: aquamarine;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+}
+header.nav{
+    float: left;
+    width: 20vw;
+    height: 20%;
+    justify-content:space-between ;
+    padding: 10px;
+    color: black;
 }
 div.post-area{
     height: 70px;
     width: 300px;
-    align-items: center;
+    align-items:end;
     text-align: center;
     justify-content: center;
 
@@ -24,14 +38,31 @@ div.post-area{
     align-items: center;
     text-align: center;
 }
-.form {
-    height: 50px;
+.post-card {
+    height: fit-content;
     width: 300px;
     padding: 15px;
-    justify-content: space-around;
-    margin: 15px;
+    justify-content: center;
+    margin: 2px;
     text-align: center;
+    border: 2px solid black;
+    align-items: center;
 }
 .hide {
     display: none;
+}
+.post-box{
+    height: 20px;
+    width: 80vw;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    box-shadow: 2px 2px grey;
+}
+.home-created-at{
+    float: right;
+
+}
+.home-title {
+    float:left;
 }

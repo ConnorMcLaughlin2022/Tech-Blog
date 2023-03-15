@@ -14,7 +14,7 @@ document.querySelector("#post-btn").addEventListener("click", (e) => {
         if (res.ok) {
             location.href = "/profile"
         } else {
-            alert("something wenttt wrong")
+            alert("something went wrong")
         }
     })
 })
@@ -52,18 +52,21 @@ document.querySelectorAll(".edit-btn").forEach(section => {
         const postId = e.target.getAttribute('id')
         console.log(postId)
         document.querySelector(`#edit-form-${postId}`).classList.remove("hide");
-        document.querySelector(`#cancel-edit-${postId}`).classList.remove("hide");
+        document.querySelector(`#post-area-${postId}`).classList.add("hide");
     });
 });
 
 
-document.querySelector(`.cancel-edit`).addEventListener('click', (e) => {
-    e.preventDefault();
-    const postId = e.target.getAttribute('id')
-    console.log(postId)
-    document.querySelector(`.edit-form`).classList.add("hide")
-    document.querySelector(`.cancel-edit`).classList.add("hide")
-});
+document.querySelector(".cancel-btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(e)
+        const postId = e.target.getAttribute('id')
+        console.log(postId)
+        document.querySelector(`#post-area-${postId}`).classList.remove("hide");
+        document.querySelector(`#edit-form-${postId}`).classList.add("hide");
+    });
+
+
 
 
 document.querySelector(".submit-edit").addEventListener("click", (e) => {
@@ -79,6 +82,7 @@ document.querySelector(".submit-edit").addEventListener("click", (e) => {
         content: document.querySelector(`#content-edit-${postId}`).value,
         id: postId
     }
+    console.log("done")
     fetch(`/api/posts/edit-post`, {
         method: 'PUT',
         body: JSON.stringify(postObj),
@@ -88,6 +92,8 @@ document.querySelector(".submit-edit").addEventListener("click", (e) => {
     }).then((res) => {
         if (res.ok) {
             location.reload();
+
+
         }
     })
         ;

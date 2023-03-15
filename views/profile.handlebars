@@ -1,34 +1,34 @@
-<div class="profile">   
-<h1>Profile</h1>
-<section class="box">
-    <div id="post-form">
-        <form>
-            <input type="text" id="post-title" placeholder="Post Title">
-            <input type="text" id="add-post" placeholder="enter post here">
-            <button class="button-form" id="post-btn">Post!</button>
-        </form>
+<div class="profile">
+    <h1>Profile</h1>
+    <section class="box">
+        <div id="post-form">
+            <form>
+                <input type="text" id="post-title" placeholder="Post Title">
+                <input type="text" id="add-post" placeholder="enter post here">
+                <button class="button-form" id="post-btn">Post!</button>
+            </form>
+        </div>
+
+    </section>
+    {{#each User.Posts}}
+    <div class="post-card">
+        <div class="post-area" id="post-area-{{id}}">
+            <h1 class="title-area">{{title}}:</h1>
+            <h3>{{content}}</h3>
+
+        <button class="button-form edit-btn" id="{{id}}">Edit</button>
+        </div>
+        <div class="hide edit-form" id="edit-form-{{id}}">
+            <form>
+                <input id="title-edit-{{id}}" type="text" value="{{title}}">
+                <textarea id="content-edit-{{id}}">{{content}}</textarea>
+            </form>
+                <button class="submit-edit" id='{{id}}'>Update Post</button>
+                <button class="button-form del-btn" id='{{id}}'>Delete</button>
+                <button class="cancel-btn" id="{{id}}">Cancel</button>
+        </div>
     </div>
 
-</section>
-{{#each User.Posts}}
-<div class="post-area">
-    <h3 class="title-area">{{title}}:</h3>
-    <h3>{{content}}</h3>
-</div>
-
-<button class="button-form edit-btn" id="{{id}}">Edit</button>
-<div class="hide edit-form" id="edit-form-{{id}}">
-
-    <form class="form">
-        <input id="title-edit-{{id}}" type="text" value="{{title}}">
-        <textarea id="content-edit-{{id}}">{{content}}</textarea>
-        <button class="submit-edit" id='{{id}}'>Update Post</button>
-    </form>
-
-</div>
-
-<button class="hide cancel-edit" id="cancel-edit-{{id}}">Cancel</button>
-<button class="button-form del-btn" id='{{id}}'>Delete</button>
-{{/each}}
-<script src="/js/profile.js"></script>
+    {{/each}}
+    <script src="/js/profile.js"></script>
 </div>
