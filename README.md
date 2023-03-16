@@ -1,7 +1,6 @@
 # Tech-Blog README:
 
-![Screenshot 2023-03-15 at 7 50 26 PM](https://user-images.githubusercontent.com/116329927/225531488-913d8a9b-fb63-4697-be1b-a5956c6f5998.png)
-
+![image](https://user-images.githubusercontent.com/116329927/225532726-4ed6f77f-f1c4-4a0a-8e8d-a20e956c7495.png)
 
 
 
