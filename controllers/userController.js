@@ -49,10 +49,14 @@ router.post("/login",(req,res)=>{
          if(bcrypt.compareSync(req.body.password,userData.password)){
              req.session.userId = userData.id;
              req.session.userEmail = userData.email;
+             req.session.logged_in = true;
              return res.json(userData)
          } else {
              return res.status(401).json({msg:"incorrect email or password"})
          }
+        
+         
+         
      }
     }).catch(err=>{
      console.log(err);

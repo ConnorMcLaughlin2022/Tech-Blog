@@ -74,7 +74,8 @@ document.querySelector(".submit-edit").addEventListener("click", (e) => {
     console.log(e)
     const postId = e.target.getAttribute('id')
     console.log(postId)
-
+    document.querySelector(`#post-area-${postId}`).classList.remove("hide");
+    document.querySelector(`#edit-form-${postId}`).classList.add("hide");
 
 
     const postObj = {
@@ -91,11 +92,10 @@ document.querySelector(".submit-edit").addEventListener("click", (e) => {
         },
     }).then((res) => {
         if (res.ok) {
-            location.reload();
-
+            location.href='./profile';
 
         }
     })
-        ;
+  
 
 })

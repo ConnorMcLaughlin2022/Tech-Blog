@@ -47,6 +47,7 @@ div.post-area{
     text-align: center;
     border: 2px solid black;
     align-items: center;
+    background: aquamarine;
 }
 .hide {
     display: none;
@@ -65,4 +66,57 @@ div.post-area{
 }
 .home-title {
     float:left;
+}
+.all-posts{
+    text-align: center;
+    margin: auto;
+}
+.post-page{
+  object-position: center;
+   
+}
+.post {
+    margin-left:10vw ;
+    margin-right:10vw ;
+    margin-top: 15px;
+
+}
+.description-box{
+    margin-top: 10px;
+    margin-left: 100px;
+    height: fit-content;
+    width: 40vw;
+    text-align: center;
+    border: 2px solid black;
+    justify-content: center;
+    padding: 5px;
+
+}
+.description-box h2{
+    margin-bottom: 15px;
+    border-top:1px dotted black ;
+
+}
+.description-box h3{
+    font-style: italic ;
+    margin-bottom: 10px;
+
+
+}
+.comment-form{
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
+.comment-box{
+    margin: 10px;
+    border: 2px dashed gray;
+    height: fit-content;
+    width: 40vw;
+    float: right;
+    padding: 3px;
+}
+.comment-page{
+    height: fit-content;
+    width: 90vw;
+    justify-content: center;
 }
